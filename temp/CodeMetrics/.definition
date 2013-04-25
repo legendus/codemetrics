@@ -1,0 +1,30 @@
+<dataStore>
+   <dimension name="Modules">
+      <feature name="Name" type="ENUM"/>
+      <feature name="Type" type="ENUM"/>
+   </dimension>
+   <cube name="PackageCube" scale="Day">
+      <dimension name="Modules"/>
+      <metric name="LinesOfCode"/>
+      <metric name="Classes"/>
+      <metric name="EfferentCouplingLibrary"/>
+      <metric name="EfferentCouplingInternal"/>
+      <metric name="AfferentCoupling"/>
+   </cube>
+   <cube name="ClassCube" scale="Day">
+      <dimension name="Modules"/>
+      <metric name="LinesOfCode"/>
+      <metric name="Attributes"/>
+      <metric name="Methods"/>
+      <metric name="LackOfCohesionOfMethods"/>
+      <metric name="EfferentCouplingLibrary"/>
+      <metric name="EfferentCouplingInternal"/>
+      <metric name="AfferentCoupling"/>
+   </cube>
+   <cube name="MethodCube" scale="Day">
+      <dimension name="Modules"/>
+      <metric name="LinesOfCode"/>
+      <metric name="Parameters"/>
+      <metric name="CyclomaticComplexity"/>
+   </cube>
+</dataStore>

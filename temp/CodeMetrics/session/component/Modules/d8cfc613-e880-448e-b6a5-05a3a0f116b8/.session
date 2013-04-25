@@ -1,0 +1,19 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://sumus.com/property/" > 
+  <rdf:Description rdf:about="http://sumus.com/resource/1">
+    <j.0:key>org.core</j.0:key>
+    <j.0:Type>Package</j.0:Type>
+    <j.0:Name>org.core</j.0:Name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sumus.com/resource/2">
+    <j.0:key>org.core.Parser</j.0:key>
+    <j.0:Type>Class</j.0:Type>
+    <j.0:Name>org.core.Parser</j.0:Name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sumus.com/resource/3">
+    <j.0:key>org.core.Parser.execute</j.0:key>
+    <j.0:Type>Method</j.0:Type>
+    <j.0:Name>org.core.Parser.execute</j.0:Name>
+  </rdf:Description>
+</rdf:RDF>

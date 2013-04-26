@@ -57,12 +57,12 @@ public class MockParser {
 	private void insertPackageTuple() {
 		Context context = buildPackageContext();
 		State state = buildPackageState();
-		Tuple factShip = new Tuple(getCube(DataStoreDefinition.PACKAGE_CUBE), new Date(), context, state);
+		Tuple factShip = new Tuple(getCube(DataStoreDefinition.PACKAGE_CUBE), context, state);
 		add(factShip);
 	}
 
 	private Context buildPackageContext() {
-		Context context = new Context ();
+		Context context = new Context (new Date());
 		context.put(DataStoreDefinition.MODULES.getName(), "org.core");
 		return context;
 	}

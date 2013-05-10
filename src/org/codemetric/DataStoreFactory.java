@@ -26,14 +26,14 @@ public class DataStoreFactory {
 	}
 
 	public DataStore createDataStore() {
+		DatawareHouse datawareHouse = new DatawareHouse (new DatawareHouseDelegate(new FileLocator(folder)));
 		try {
-			DatawareHouse datawareHouse = new DatawareHouse (new DatawareHouseDelegate(new FileLocator(folder)));
 			DataStore dataStore = datawareHouse.createDataStore(DataStoreDefinition.DATA_STORE_NAME);
 			defineDataStore(dataStore);
 			return dataStore;
 		}
 		catch (DatawareHouseException e) {
-			throw new RuntimeException("DataStore " + DataStoreDefinition.DATA_STORE_NAME + " already exists");
+			return datawareHouse.getDataStore(DataStoreDefinition.DATA_STORE_NAME);
 		}
 	}
 

@@ -24,7 +24,6 @@ public class Main {
 	private static void checkArgs(String[] args) {
 		checkIsNotNull(args);
 		checkSourceExists(new File (args[0]));
-		checkTargetNotExists(new File (args[1]));
 	}
 
 	private static void checkSourceExists(File sourceDirectory) {
@@ -32,11 +31,6 @@ public class Main {
 			throw new RuntimeException("Source path does not exist");
 	}
 	
-	private static void checkTargetNotExists(File targetDirectory) {
-		if(targetDirectory.exists())
-			throw new RuntimeException("Target path does not exist");
-	}
-
 	private static void checkIsNotNull(String[] args) {
 		if(args[0] == null || args[1] == null)
 			throw new RuntimeException("Paths not introduced");
